@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/screens/verification_screen.dart';
 
 class SignInWithPhoneNumber extends StatelessWidget {
   const SignInWithPhoneNumber({super.key});
@@ -7,14 +8,36 @@ class SignInWithPhoneNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, VerificationScreen.id);
+          },
           backgroundColor: const Color(0xFF53B175),
-          child: const Icon(Icons.arrow_forward)),
+          child: const Icon(
+            Icons.chevron_right,
+          )),
       body: Column(children: [
-        Image.asset(
-          "assets/images/group6806.png",
-          color: Colors.white.withOpacity(0.1),
-          colorBlendMode: BlendMode.modulate,
+        Container(
+          height: 221,
+          decoration: BoxDecoration(
+            image: const DecorationImage(
+                image: AssetImage("assets/images/group6806.png"),
+                fit: BoxFit.fill,
+                opacity: 0.1),
+            color: Colors.white.withOpacity(0.1),
+          ),
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 30.0),
+            child: IconButton(
+              icon: const Icon(
+                Icons.chevron_left,
+                size: 40,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
         ),
         const Row(
           children: [
@@ -30,7 +53,7 @@ class SignInWithPhoneNumber extends StatelessWidget {
         const Row(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 15.0),
+              padding: EdgeInsets.only(left: 15.0, top: 20),
               child: Text(
                 'Mobile Number',
                 style: TextStyle(
