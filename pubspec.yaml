@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.7
   font_awesome_flutter: ^10.5.0
   blur: ^3.1.0
+  dropdown_button2: ^2.3.7
 
 
 dev_dependencies:
@@ -92,3 +93,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_assets:
+  assets_path: assets/images/
+  output_path: lib/helpers/
+  filename: app_images.dart
+  field_prefix:

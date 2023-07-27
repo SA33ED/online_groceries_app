@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:online_groceries_app/screens/sign_in_screen.dart';
+import 'package:online_groceries_app/helpers/app_images.dart';
+import 'package:online_groceries_app/widgets/custom_btn.dart';
+
+import 'sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -12,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/welcomeLanding.png"),
+            image: AssetImage(Assets.imagesWelcomeLanding),
             fit: BoxFit.fill,
           ),
         ),
@@ -26,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SvgPicture.asset("assets/images/abstractLogo.svg"),
+                    SvgPicture.asset(Assets.imagesAbstractLogo),
                     const Text(
                       'Welcome \nto our store',
                       textAlign: TextAlign.center,
@@ -47,32 +50,11 @@ class WelcomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, SignInScreen.id);
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 353,
-                        height: 67,
-                        decoration: ShapeDecoration(
-                          color: const Color(0xFF53B175),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(19),
-                          ),
-                        ),
-                        child: const Text(
-                          'Get Started',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color(0xFFFFF9FF),
-                            fontSize: 18,
-                            fontFamily: 'Gilroy',
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    )
+                    CustomBtn(
+                        onTap: () {
+                          Navigator.pushNamed(context, SignInScreen.id);
+                        },
+                        title: "Get Started"),
                   ],
                 ),
               ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/helpers/app_images.dart';
+import 'package:online_groceries_app/helpers/constans.dart';
+import 'package:online_groceries_app/screens/select_location.dart';
 
 class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
@@ -7,8 +10,10 @@ class VerificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: const Color(0xFF53B175),
+          onPressed: () {
+            Navigator.pushNamed(context, SelectLocation.id);
+          },
+          backgroundColor: kPrimaryColor,
           child: const Icon(
             Icons.chevron_right,
           )),
@@ -18,16 +23,16 @@ class VerificationScreen extends StatelessWidget {
             height: 221,
             decoration: BoxDecoration(
               image: const DecorationImage(
-                  image: AssetImage("assets/images/group6806.png"),
+                  image: AssetImage(Assets.imagesBackgroundOne),
                   fit: BoxFit.fill,
                   opacity: 0.1),
               color: Colors.white.withOpacity(0.1),
             ),
             alignment: Alignment.topLeft,
             child: Padding(
-              padding:const EdgeInsets.only(left: 10.0, top: 30.0),
+              padding: const EdgeInsets.only(left: 10.0, top: 30.0),
               child: IconButton(
-                icon:const Icon(
+                icon: const Icon(
                   Icons.chevron_left,
                   size: 40,
                 ),
@@ -71,16 +76,16 @@ class VerificationScreen extends StatelessWidget {
               keyboardType: TextInputType.phone,
             ),
           ),
-          const Expanded(
+          Expanded(
             child: Padding(
-              padding: EdgeInsets.only(bottom: 32.0, left: 15),
+              padding: const EdgeInsets.only(bottom: 32.0, left: 15),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     'Resend Code',
                     style: TextStyle(
-                      color: Color(0xFF53B175),
+                      color: kPrimaryColor,
                       fontSize: 18,
                       fontFamily: 'Gilroy-Medium',
                       fontWeight: FontWeight.w400,

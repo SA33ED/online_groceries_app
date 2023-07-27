@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/helpers/app_images.dart';
+import 'package:online_groceries_app/helpers/constans.dart';
 import 'package:online_groceries_app/screens/verification_screen.dart';
 
 class SignInWithPhoneNumber extends StatelessWidget {
@@ -11,7 +13,7 @@ class SignInWithPhoneNumber extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, VerificationScreen.id);
           },
-          backgroundColor: const Color(0xFF53B175),
+          backgroundColor: kPrimaryColor,
           child: const Icon(
             Icons.chevron_right,
           )),
@@ -20,7 +22,7 @@ class SignInWithPhoneNumber extends StatelessWidget {
           height: 221,
           decoration: BoxDecoration(
             image: const DecorationImage(
-                image: AssetImage("assets/images/group6806.png"),
+                image: AssetImage(Assets.imagesBackgroundOne),
                 fit: BoxFit.fill,
                 opacity: 0.1),
             color: Colors.white.withOpacity(0.1),

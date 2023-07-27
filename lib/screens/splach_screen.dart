@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:online_groceries_app/helpers/constans.dart';
 import 'package:online_groceries_app/screens/welcome_screen.dart';
 
 class SplachScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _SplachScreenState extends State<SplachScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff53B175),
+      backgroundColor: kPrimaryColor,
       body: Center(child: SvgPicture.asset("assets/images/logo.svg")),
     );
   }

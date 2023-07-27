@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/screens/login_screen.dart';
+import 'package:online_groceries_app/screens/select_location.dart';
 import 'package:online_groceries_app/screens/sign_in_screen.dart';
 import 'package:online_groceries_app/screens/sign_in_with_number.dart';
 import 'package:online_groceries_app/screens/splach_screen.dart';
@@ -22,6 +24,8 @@ class OnlineGroceriesApp extends StatelessWidget {
         SignInScreen.id: (context) => const SignInScreen(),
         SignInWithPhoneNumber.id: (context) => const SignInWithPhoneNumber(),
         VerificationScreen.id: (context) => const VerificationScreen(),
+        SelectLocation.id: (context) => const SelectLocation(),
+        LoginScreen.id :(context) => const LoginScreen(),
       },
       initialRoute: SplachScreen.id,
     );

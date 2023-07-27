@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/helpers/app_images.dart';
 import 'package:online_groceries_app/screens/sign_in_with_number.dart';
 import 'package:online_groceries_app/widgets/sign_in_with_social_media_btn.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,7 +12,7 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Image.asset("assets/images/fruits_background.png"),
+          Image.asset(Assets.imagesFruitsBackground),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
