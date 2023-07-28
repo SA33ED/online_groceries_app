@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:online_groceries_app/helpers/app_images.dart';
 import 'package:online_groceries_app/helpers/constans.dart';
 import 'package:online_groceries_app/screens/home_screen.dart';
+import 'package:online_groceries_app/screens/sign_up_screen.dart';
 import 'package:online_groceries_app/widgets/custom_btn.dart';
 import 'package:online_groceries_app/widgets/custom_text_field.dart';
 
@@ -24,8 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: ListView(
             children: [
               Stack(
                 clipBehavior: Clip.none,
@@ -47,7 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-              // SvgPicture.asset(Assets.imagesCarrotLogo),
+              const SizedBox(
+                height: 25,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -114,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       )
                     ],
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 35),
                   CustomBtn(
                       onTap: () {
                         Navigator.pushNamed(context, HomeScreen.id);
@@ -134,14 +136,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           letterSpacing: 0.70,
                         ),
                       ),
-                      Text(" Singup",
-                          style: TextStyle(
-                            color: kPrimaryColor,
-                            fontSize: 14,
-                            fontFamily: 'Gilroy',
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0.70,
-                          )),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, SignUpScreen.id);
+                        },
+                        child: Text(" Singup",
+                            style: TextStyle(
+                              color: kPrimaryColor,
+                              fontSize: 14,
+                              fontFamily: 'Gilroy',
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 0.70,
+                            )),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 100),
