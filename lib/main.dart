@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:online_groceries_app/screens/home_screen.dart';
 import 'package:online_groceries_app/screens/login_screen.dart';
+import 'package:online_groceries_app/screens/navigation_screen.dart';
+import 'package:online_groceries_app/screens/product_detailes.dart';
+import 'package:online_groceries_app/screens/products_screen.dart';
 import 'package:online_groceries_app/screens/select_location_screen.dart';
 import 'package:online_groceries_app/screens/sign_in_screen.dart';
 import 'package:online_groceries_app/screens/number_screen.dart';
@@ -29,9 +32,12 @@ class OnlineGroceriesApp extends StatelessWidget {
         SelectLocation.id: (context) => const SelectLocation(),
         LoginScreen.id: (context) => const LoginScreen(),
         SignUpScreen.id: (context) => const SignUpScreen(),
+        NavigationScreen.id: (context) => const NavigationScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
+        ProductsScreen.id: (context) =>  ProductsScreen(),
+        ProductDetailes.id: (context) =>  ProductDetailes(),
       },
-      initialRoute: SplachScreen.id,
+      initialRoute: NavigationScreen.id,
     );
   }
 }

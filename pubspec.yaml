@@ -36,6 +36,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.7
   font_awesome_flutter: ^10.5.0
+  persistent_bottom_nav_bar: ^5.0.2
 
 dev_dependencies:
 
@@ -62,6 +63,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/products/
+    - assets/images/categories/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
@@ -75,6 +77,10 @@ flutter:
     - family: Aclonica
       fonts:
         - asset: assets/fonts/Aclonica-Regular.ttf
+    - family: Gilroy-Bold
+      fonts:
+        - asset: assets/fonts/Gilroy-Bold.ttf
+
 
 
   #

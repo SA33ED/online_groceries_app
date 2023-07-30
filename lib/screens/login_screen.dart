@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:online_groceries_app/helpers/app_images.dart';
 import 'package:online_groceries_app/helpers/constans.dart';
-import 'package:online_groceries_app/screens/home_screen.dart';
+import 'package:online_groceries_app/screens/navigation_Screen.dart';
 import 'package:online_groceries_app/screens/sign_up_screen.dart';
 import 'package:online_groceries_app/widgets/custom_btn.dart';
 import 'package:online_groceries_app/widgets/custom_text_field.dart';
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 35),
                   CustomBtn(
                       onTap: () {
-                        Navigator.pushNamed(context, HomeScreen.id);
+                        Navigator.pushNamed(context, NavigationScreen.id);
                       },
                       title: "Log In"),
                   const SizedBox(height: 20),

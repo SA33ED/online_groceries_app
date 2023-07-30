@@ -3,10 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:online_groceries_app/helpers/constans.dart';
 import 'package:online_groceries_app/widgets/custom_btn.dart';
-
 import '../helpers/app_images.dart';
 import '../widgets/custom_text_field.dart';
-import 'home_screen.dart';
+import 'navigation_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -145,7 +144,7 @@ class SignUpScreen extends StatelessWidget {
                   const SizedBox(height: 25),
                   CustomBtn(
                       onTap: () {
-                        Navigator.pushNamed(context, HomeScreen.id);
+                        Navigator.pushNamed(context, NavigationScreen.id);
                       },
                       title: "Sign Up"),
                   const SizedBox(height: 20),
