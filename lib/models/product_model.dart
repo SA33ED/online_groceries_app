@@ -313,3 +313,86 @@ List<Beverages> beverages = [
       details:
           "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."),
 ];
+
+List cartItems = [
+  Beverages(
+      image: Assets.imagesProductsProduct8,
+      name: "Diet Coke",
+      price: 1.99,
+      unit: "355ml, Price",
+      details:
+          "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."),
+  Groceries(
+    image: Assets.imagesProductsProduct5,
+    name: "Rice",
+    price: 5.66,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "250gm , Pric",
+  ),
+  Frozen(
+    image: Assets.imagesProductsProduct7,
+    name: "Broiler Chicken",
+    price: 4.99,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "7pcs , Priceg",
+  ),
+  Frozen(
+    image: Assets.imagesProductsProduct6,
+    name: "Beef Bone",
+    price: 4.99,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "7pcs , Priceg",
+  ),
+  BestSelling(
+    image: Assets.imagesProductsProduct2,
+    name: "Naturel Red Apple",
+    price: 3.10,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "1Kg , Priceg",
+  ),
+];
+List favorites = [
+  Beverages(
+      image: Assets.imagesProductsProduct8,
+      name: "Diet Coke",
+      price: 1.99,
+      unit: "355ml, Price",
+      details:
+          "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."),
+  Groceries(
+    image: Assets.imagesProductsProduct5,
+    name: "Rice",
+    price: 5.66,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "250gm , Pric",
+  ),
+  Frozen(
+    image: Assets.imagesProductsProduct7,
+    name: "Broiler Chicken",
+    price: 4.99,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "7pcs , Priceg",
+  ),
+  Frozen(
+    image: Assets.imagesProductsProduct6,
+    name: "Beef Bone",
+    price: 4.99,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "7pcs , Priceg",
+  ),
+  BestSelling(
+    image: Assets.imagesProductsProduct2,
+    name: "Naturel Red Apple",
+    price: 3.10,
+    details:
+        "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+    unit: "1Kg , Priceg",
+  ),
+];

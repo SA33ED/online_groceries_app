@@ -141,6 +141,10 @@ class Assets {
   /// assets/images/splash_screen.png
   static const String imagesSplashScreen = "assets/images/splash_screen.png";
 
+  /// Assets for imagesSuccess
+  /// assets/images/success.svg
+  static const String imagesSuccess = "assets/images/success.svg";
+
   /// Assets for imagesWelcomeLanding
   /// assets/images/welcome_landing.png
   static const String imagesWelcomeLanding = "assets/images/welcome_landing.png";
