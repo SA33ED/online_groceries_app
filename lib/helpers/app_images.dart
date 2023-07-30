@@ -129,6 +129,10 @@ class Assets {
   /// assets/images/products/product9.png
   static const String imagesProductsProduct9 = "assets/images/products/product9.png";
 
+  /// Assets for imagesProfile
+  /// assets/images/profile.jpg
+  static const String imagesProfile = "assets/images/profile.jpg";
+
   /// Assets for imagesSaudi
   /// assets/images/saudi.png
   static const String imagesSaudi = "assets/images/saudi.png";
