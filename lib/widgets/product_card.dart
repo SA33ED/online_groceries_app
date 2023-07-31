@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:online_groceries_app/models/product_model.dart';
 
 import '../helpers/constans.dart';
 
@@ -77,7 +78,25 @@ class ProductCard extends StatelessWidget {
                           color: kPrimaryColor,
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            cartItems.add(prodcuts[index]);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                duration: const Duration(seconds: 1),
+                                backgroundColor: kPrimaryColor,
+                                padding:
+                                    const EdgeInsets.only(bottom: 25, top: 20),
+                                content: const Center(
+                                  child: Text(
+                                    "Added to Cart",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 24),
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
                           icon: const Icon(Icons.add),
                           color: Colors.white,
                         ),

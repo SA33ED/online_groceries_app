@@ -37,7 +37,7 @@ class OnlineGroceriesApp extends StatelessWidget {
         ProductsScreen.id: (context) =>  ProductsScreen(),
         ProductDetailes.id: (context) =>  ProductDetailes(),
       },
-      initialRoute: SplachScreen.id,
+      initialRoute: NavigationScreen.id,
     );
   }
 }
