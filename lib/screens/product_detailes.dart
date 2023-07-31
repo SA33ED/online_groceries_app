@@ -19,6 +19,7 @@ class ProductDetailes extends StatefulWidget {
 
 class _ProductDetailesState extends State<ProductDetailes> {
   int count = 1;
+  bool addedToFav = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,9 +78,24 @@ class _ProductDetailesState extends State<ProductDetailes> {
                   ),
                 ],
               ),
-              const Icon(
-                Icons.favorite_outline,
-                size: 32,
+              IconButton(
+                icon: addedToFav == false
+                    ? const Icon(Icons.favorite_outline)
+                    : const Icon(
+                        Icons.favorite,
+                        color: Colors.red,
+                      ),
+                onPressed: () {
+                  setState(() {
+                    if (addedToFav == true) {
+                      addedToFav = false;
+                      favorites.remove(widget.product!);
+                    } else if (addedToFav == false) {
+                      addedToFav = true;
+                      favorites.add(widget.product!);
+                    }
+                  });
+                },
               )
             ],
           ),
@@ -194,7 +210,11 @@ class _ProductDetailesState extends State<ProductDetailes> {
         const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: CustomBtn(onTap: () {}, title: "Add"),
+          child: CustomBtn(
+              onTap: () {
+                favorites.add(widget.product!);
+              },
+              title: "Add"),
         )
       ]),
     );
