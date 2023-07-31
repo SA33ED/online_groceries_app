@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     required this.obscureText,
     required this.onChanged,
+    required this.validator,
   });
   String title;
   bool obscureText;
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   Widget? label;
   Widget? suffixIcon;
   void Function(String) onChanged;
+  String? Function(String?) validator;
   TextInputType? textInputType;
 
   @override
@@ -41,7 +43,8 @@ class CustomTextField extends StatelessWidget {
             )
           ],
         ),
-        TextField(
+        TextFormField(
+          validator: validator,
           decoration: InputDecoration(
             hintText: hint,
             label: label,
